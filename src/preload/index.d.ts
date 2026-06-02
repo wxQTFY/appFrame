@@ -21,6 +21,10 @@ interface ElectronAPI {
   }) => Promise<void>
 }
 
-interface Window {
-  electronAPI: ElectronAPI
+declare global {
+  interface Window {
+    electronAPI: ElectronAPI
+  }
 }
+
+export {}
