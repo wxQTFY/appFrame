@@ -13,9 +13,8 @@
     "composite": true,
     "outDir": "./out",
     "types": ["electron-vite/node"],
-    "baseUrl": ".",
     "paths": {
-      "@common/*": ["src/common/*"]
+      "@common/*": ["./src/common/*"]
     }
   },
   "include": [

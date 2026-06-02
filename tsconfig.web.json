@@ -12,10 +12,9 @@
     "isolatedModules": true,
     "composite": true,
     "outDir": "./out",
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/renderer/src/*"],
-      "@common/*": ["src/common/*"]
+      "@/*": ["./src/renderer/src/*"],
+      "@common/*": ["./src/common/*"]
     },
     "types": ["vite/client"]
   },
