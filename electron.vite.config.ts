@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
+import { defineConfig } from 'electron-vite'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -9,7 +9,6 @@ const srcPath = resolve(__dirname, 'src')
 
 export default defineConfig({
   main: {
-    plugins: [externalizeDepsPlugin()],
     envDir: resolve(__dirname),
     build: {
       rollupOptions: {
@@ -18,7 +17,6 @@ export default defineConfig({
     }
   },
   preload: {
-    plugins: [externalizeDepsPlugin()],
     envDir: resolve(__dirname)
   },
   renderer: {

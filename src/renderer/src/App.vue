@@ -31,7 +31,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <el-config-provider namespace="ep" :locale="elementLocale">
+  <el-config-provider :locale="elementLocale">
     <div
       class="min-h-screen flex flex-col transition-colors duration-300"
       :class="appStore.theme === 'dark' ? 'bg-gray-950 text-white' : 'bg-gray-50 text-gray-900'"
