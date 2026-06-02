@@ -1,0 +1,76 @@
+/**
+ * 基础全局样式
+ * 覆盖浏览器默认样式，统一基线
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family:
+    'Microsoft YaHei',
+    'PingFang SC',
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  line-height: 1.6;
+  color: #e5e7eb;
+  background-color: #030712;
+}
+
+/* 明亮模式基础色 */
+html:not(.dark) body {
+  color: #374151;
+  background-color: #f9fafb;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+/* 滚动条样式 - 暗黑 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* 窗口拖拽区 */
+.drag-region {
+  -webkit-app-region: drag;
+  user-select: none;
+}
+.no-drag {
+  -webkit-app-region: no-drag;
+}
